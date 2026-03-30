@@ -1,4 +1,4 @@
-# Multi-Threaded Elevator System (LLD)
+# Elevator System (LLD)
 
 A highly robust, fully concurrent Low-Level Design (LLD) of an Elevator System implemented in Java.
 
