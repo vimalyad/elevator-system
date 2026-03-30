@@ -3,6 +3,7 @@ package ElevatorSystem.models.elevator;
 import ElevatorSystem.enums.Direction;
 import ElevatorSystem.enums.ElevatorStatus;
 import ElevatorSystem.models.Door;
+import ElevatorSystem.sensors.WeightSensor;
 
 public interface IElevator {
     int getElevatorId();
@@ -24,4 +25,6 @@ public interface IElevator {
     int getMaxFloor();
 
     Door getDoor();
+
+    WeightSensor getWeightSensor();
 }

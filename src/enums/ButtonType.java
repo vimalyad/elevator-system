@@ -5,5 +5,6 @@ public enum ButtonType {
     DOWN,
     FLOOR,
     OPEN_DOOR,
-    CLOSE_DOOR
+    CLOSE_DOOR,
+    ALARM
 }

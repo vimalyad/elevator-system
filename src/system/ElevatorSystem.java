@@ -6,6 +6,7 @@ import ElevatorSystem.enums.RequestType;
 import ElevatorSystem.models.Building;
 import ElevatorSystem.models.Request;
 import ElevatorSystem.observers.ElevatorObserver;
+import ElevatorSystem.strategies.DispatchStrategy;
 
 public class ElevatorSystem {
     private final Building building;
@@ -38,5 +39,17 @@ public class ElevatorSystem {
 
     public void registerObserver(ElevatorObserver observer) {
         controller.registerObserver(observer);
+    }
+
+    public void triggerAlarm() {
+        controller.handleAlarm();
+    }
+
+    public void shutdown() {
+        controller.shutdown();
+    }
+
+    public void setStrategy(DispatchStrategy strategy) {
+        this.controller.setStrategy(strategy);
     }
 }

@@ -24,3 +24,4 @@ public class Door {
         this.doorStatus = doorStatus;
     }
 }
+

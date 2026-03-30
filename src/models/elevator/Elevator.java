@@ -4,6 +4,7 @@ import ElevatorSystem.enums.Direction;
 import ElevatorSystem.enums.ElevatorStatus;
 import ElevatorSystem.models.Door;
 import ElevatorSystem.models.panels.ElevatorPanel;
+import ElevatorSystem.sensors.WeightSensor;
 
 public class Elevator implements IElevator {
     private final int elevatorId;
@@ -12,14 +13,16 @@ public class Elevator implements IElevator {
     private final ElevatorPanel panel;
     private final int maxFloor;
     private final int minFloor;
+    private final WeightSensor weightSensor;
 
-    public Elevator(int elevatorId, int minFloor, int maxFloor, ElevatorPanel elevatorPanel, Door door) {
+    public Elevator(int elevatorId, int minFloor, int maxFloor, ElevatorPanel elevatorPanel, Door door, WeightSensor sensor) {
         this.elevatorId = elevatorId;
         this.minFloor = minFloor;
         this.maxFloor = maxFloor;
         this.panel = elevatorPanel;
         this.elevatorStatus = ElevatorStatus.IDLE;
         this.door = door;
+        this.weightSensor = sensor;
     }
 
     public int getElevatorId() {
@@ -60,5 +63,9 @@ public class Elevator implements IElevator {
 
     public Door getDoor() {
         return door;
+    }
+
+    public WeightSensor getWeightSensor() {
+        return weightSensor;
     }
 }

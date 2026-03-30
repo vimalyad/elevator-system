@@ -4,5 +4,6 @@ public enum ElevatorStatus {
     UP,
     DOWN,
     IDLE,
-    NOT_AVAILABLE
+    NOT_AVAILABLE,
+    MAINTENANCE
 }
